@@ -1,12 +1,13 @@
 <html>
 <head>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <title>Forms</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <title>Madlibs</title>
   <!-- Things to do to use React
     React 19: released September 2026
     Use an Import Map for React 19 ESM (ECMA Script Modules)
     Browswers need this to use import/export statement
      -->
+
     <script type="importmap">
       {
         "imports": {
@@ -22,12 +23,10 @@
 </head>
 
 <body>
-  <div id="form">
-    <!-- This element's contents will be replaced with your component. -->
-  </div>
-
-  <!-- Load our React component. -->
-  <script src="./javascripts/form.js" type="text/babel" data-type="module"></script>
+    <div id="root"></div>
+    <script src="./javascripts/madlib.js"
+            type="text/babel"
+            data-type="module"></script>
 
 </body>
 </html>

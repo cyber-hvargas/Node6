@@ -116,6 +116,16 @@ router.post('/signup', function(req, res, next) {
     }
   });
 });
-// new stuff ends here
+
+// Check login status
+router.get('/status', function (req, res) {
+  if (req.user) {
+    res.json({ loggedIn: true, name: req.user.prefer });
+  } else {
+    res.json({ loggedIn: false });
+  }
+});
+
+module.exports = router; // This line is already there, don't delete it
 
 module.exports = router;
