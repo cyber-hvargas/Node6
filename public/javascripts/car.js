@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-const BookComponent = () => {
+const CarComponent = () => {
   React.useEffect(() => {
     fetch('/carOut')
       .then(response => {
@@ -13,7 +13,7 @@ const BookComponent = () => {
       .then(data => {
         // https://datatables.net/
         // https://github.com/fiduswriter/Simple-DataTables
-        const dataTable = new simpleDatatables.DataTable("#car");
+        const dataTable = new simpleDatatables.DataTable("#car", {perPage: 25});
         dataTable.insert(data);
       })
       .catch(error => {
@@ -33,8 +33,8 @@ const BookComponent = () => {
   );
 };
 
-const book = createRoot(document.getElementById('book'));
-book.render(<BookComponent />);
+const car = createRoot(document.getElementById('root'));
+car.render(<CarComponent />);
 
 /*
 const BookComponent = () => {

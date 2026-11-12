@@ -13,3 +13,20 @@ nav ul li {
   list-style-type: none;
 }
 .menu {text-align: right;}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    font-size: 20px;
+}
+
+.form-row input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
